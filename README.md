@@ -1,1 +1,2 @@
-# 
+# Altier Face Recognition Package 
+
