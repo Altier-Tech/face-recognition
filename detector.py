@@ -60,9 +60,6 @@ def _recognize_face(unknown_encoding, loaded_encodings):
         return votes.most_common(1)[0][0]
 
 
-recognize_faces("unknown2.jpg")
-
-
 def _display_face(draw, bounding_box, name):
     top, right, bottom, left = bounding_box
     draw.rectangle(((left, top), (right, bottom)), outline=BOUNDING_BOX_COLOR)
@@ -79,3 +76,6 @@ def _display_face(draw, bounding_box, name):
         name,
         fill="white",
     )
+
+
+recognize_faces("unknown2.jpg")
