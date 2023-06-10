@@ -10,6 +10,9 @@ Path("training").mkdir(exist_ok=True)
 Path("output").mkdir(exist_ok=True)
 Path("validation").mkdir(exist_ok=True)
 
+BOUNDING_BOX_COLOR = "blue"
+TEXT_COLOR = "white"
+
 
 def recognize_faces(
         image_location: str,
