@@ -40,6 +40,9 @@ def recognize_faces(
         # print(name, bounding_box)
         _display_face(draw, bounding_box, name)
 
+    del draw
+    pillow_image.show()
+
 
 def _recognize_face(unknown_encoding, loaded_encodings):
     boolean_matches = face_recognition.compare_faces(
