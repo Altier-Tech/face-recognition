@@ -37,7 +37,8 @@ def recognize_faces(
         name = _recognize_face(unknown_encoding, loaded_encodings)
         if not name:
             name = "Unknown"
-        print(name, bounding_box)
+        # print(name, bounding_box)
+        _display_face(draw, bounding_box, name)
 
 
 def _recognize_face(unknown_encoding, loaded_encodings):
