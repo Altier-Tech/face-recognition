@@ -1,5 +1,5 @@
 from pathlib import Path
-
+import pickle
 import face_recognition
 
 DEFAULT_ENCODINGS_PATH = Path("output/encodings.pkl")
