@@ -61,3 +61,21 @@ def _recognize_face(unknown_encoding, loaded_encodings):
 
 
 recognize_faces("unknown2.jpg")
+
+
+def _display_face(draw, bounding_box, name):
+    top, right, bottom, left = bounding_box
+    draw.rectangle(((left, top), (right, bottom)), outline=BOUNDING_BOX_COLOR)
+    text_left, text_top, text_right, text_bottom = draw.textbbox(
+        (left, bottom), name
+    )
+    draw.rectangle(
+        ((text_left, text_top), (text_right, text_bottom)),
+        fill="blue",
+        outline="blue",
+    )
+    draw.text(
+        (text_left, text_top),
+        name,
+        fill="white",
+    )
