@@ -1,6 +1,7 @@
 from pathlib import Path
 import pickle
 import face_recognition
+from collections import Counter
 
 DEFAULT_ENCODINGS_PATH = Path("output/encodings.pkl")
 
@@ -25,3 +26,11 @@ def recognize_faces(
     input_face_encodings = face_recognition.face_encodings(
         input_image, input_face_locations
     )
+
+    for bounding_box, unknown_encoding in zip(
+            input_face_locations, input_face_encodings
+    ):
+        name = _recognize_face(unknown_encoding, loaded_encodings)
+        if not name:
+            name = "Unknown"
+        print(name, bounding_box)
