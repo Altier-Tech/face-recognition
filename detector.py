@@ -1,6 +1,6 @@
-from pathlib import Path
 import pickle
 import face_recognition
+from pathlib import Path
 from collections import Counter
 from PIL import Image, ImageDraw
 
