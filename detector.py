@@ -28,6 +28,9 @@ def recognize_faces(
         input_image, input_face_locations
     )
 
+    pillow_image = Image.fromarray(input_image)
+    draw = ImageDraw.Draw(pillow_image)
+
     for bounding_box, unknown_encoding in zip(
             input_face_locations, input_face_encodings
     ):
