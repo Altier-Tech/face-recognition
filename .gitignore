@@ -1,3 +1,6 @@
+### Ignoring images ###
+*.jpg
+
 # Compiled class file
 *.class
 
