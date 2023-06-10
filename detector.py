@@ -78,4 +78,4 @@ def _display_face(draw, bounding_box, name):
     )
 
 
-recognize_faces("unknown2.jpg")
+recognize_faces("unknown1.jpg")
